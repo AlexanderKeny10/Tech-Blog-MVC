@@ -15,7 +15,12 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: [
+          'id', 
+          'comment_text', 
+          'post_id', 
+          'user_id', 
+          'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -87,6 +92,13 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+// render the signup page
+router.get('/signup', (req, res) => {
+  res.render('signup');
+  return;
+});
+
+// render the login page 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
