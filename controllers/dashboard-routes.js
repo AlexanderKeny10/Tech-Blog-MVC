@@ -3,8 +3,10 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// dashboard displays all posts created by the logged in user
+// display all posts for dashboard 
 router.get('/', withAuth, (req, res) => {
+  console.log(req.session);
+  console.log('======================');
     Post.findAll({
       where: {
         user_id: req.session.user_id
@@ -69,22 +71,20 @@ router.get('/edit/:id', withAuth, (req, res) => {
   })
   .then(dbPostData => {
     if (dbPostData) {
-    res.status(404).json({ message: 'No post found with this id' });
-    return;
-  }
-
-  const post = dbPostData.get({ plain: true });
-
+      const post = dbPostData.get({ plain: true });
+      
       res.render('edit-post', {
         post,
         loggedIn: true
-      });  
+      });
+    } else {
+      res.status(404).json({ message: 'No post found with this id' });
+    }
   })
   .catch(err => {
-    console.log(err);
     res.status(500).json(err);
   });
 });
-  
+
 
 module.exports = router;
