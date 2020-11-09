@@ -1,9 +1,10 @@
 // homepage and login page
 const router = require('express').Router();
-const { Post, User, Comment, Vote } = require('../models');
+const { Post, User, Comment, } = require('../models');
 
 // get all posts for the homepage
 router.get('/', (req, res) => {
+  console.log('======================');
   Post.findAll({
     attributes: [
       'id',

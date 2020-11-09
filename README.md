@@ -1,5 +1,9 @@
 # Tech-Blog-MVC
 
+## Description
+
+The Biased Tech Hub is a blog designed for for any and all developers to share their insights on their own apps, news, or all other topics
+
 ## User Story
 
 AS A developer who writes about tech
@@ -41,4 +45,24 @@ WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 WHEN I am idle on the page for more than a set time
 THEN I am automatically signed out of the site 
+
+## Technologies
+JavaScript
+Model-View-Controller (MVC)
+Node.js
+Express.js API
+Sequelize
+Handlebars.js
+MySQL2
+
+## Installation
+
+## Usage
+
+## Screenshots
+
+## Quesstions
+  * Github Username: Aken00
+  * [User Github](https://github.com/Aken00)
+  * You can reach me at (ajken04@gmail.com)
 
