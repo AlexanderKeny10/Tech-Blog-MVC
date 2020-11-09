@@ -1,12 +1,11 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', (req, res) => {
     User.findAll({
-      attributes: { exclude: [
-          'password'
-        ]}
+      attributes: { exclude: ['password']}
     })
       .then(dbUserData => res.json(dbUserData))
       .catch(err => {
@@ -15,7 +14,7 @@ router.get('/', (req, res) => {
       });
   });
 
-// get user by id
+// get one user by id
 router.get('/:id', (req, res) => {
     User.findOne({
       attributes: { exclude: ['password'] },
@@ -25,7 +24,7 @@ router.get('/:id', (req, res) => {
       include: [
         {
           model: Post,
-          attributes: ['id', 'title', 'post_url', 'created_at']
+          attributes: ['id', 'title', 'post_content', 'created_at']
         },
         {
           model: Comment,
@@ -101,7 +100,7 @@ router.post('/login', (req, res) => {
 });
 
 // POST for logout
-router.post('/logout', (req, res) => {
+router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
         res.status(204).end();
@@ -133,7 +132,7 @@ router.put('/:id', (req, res) => {
       });
 });
 
-// DELETE user by id
+// DELETE user by one id 
 router.delete('/:id', (req, res) => {
     User.destroy({
       where: {
