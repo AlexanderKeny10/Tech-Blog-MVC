@@ -4,11 +4,10 @@ const { Post, User, Comment, Vote } = require('../models');
 
 // get all posts for the homepage
 router.get('/', (req, res) => {
-  console.log('req.session');
   Post.findAll({
     attributes: [
       'id',
-      'post_url',
+      'post_content',
       'title',
       'created_at',
     ],
@@ -54,7 +53,7 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'post_content',
       'title',
       'created_at',
     ],
