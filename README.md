@@ -57,12 +57,16 @@ MySQL2
 
 ## Screenshots
 
+### Homepage user logged in
 ![](images/homepage-loggedin-ss.png)
 
+### Homepage user not logged in
 ![](images/homepage-loggedout-ss.png)
 
+### Login and sign up page
 ![](images/login-signup-ss.png)
 
+### Dashboard to create a post
 ![](images/dashboard-ss.png)
 
 ## Quesstions
