@@ -55,14 +55,25 @@ Sequelize
 Handlebars.js
 MySQL2
 
-## Installation
-
-## Usage
-
 ## Screenshots
+
+![](images/homepage-loggedin-ss.png)
+
+![](images/homepage-loggedout-ss.png)
+
+![](images/login-signup-ss.png)
+
+![](images/dashboard-ss.png)
 
 ## Quesstions
   * Github Username: Aken00
   * [User Github](https://github.com/Aken00)
   * You can reach me at (ajken04@gmail.com)
 
+## Links 
+Visit project at:https://github.com/Aken00/Tech-Blog-MVC
+Visit deployed project at: 
+
+## License
+Copyright (c) Alexander Kenney All rights reserved. 
+Licensed under Mozilla Public License 2.0
