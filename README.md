@@ -77,7 +77,7 @@ MySQL2
 ## Links 
 Visit project at:https://github.com/Aken00/Tech-Blog-MVC
 
-Visit deployed project at: 
+Visit deployed project at: https://biased-tech-hub.herokuapp.com/ 
 
 ## License
 Copyright (c) Alexander Kenney All rights reserved. 
