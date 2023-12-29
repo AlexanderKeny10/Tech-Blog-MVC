@@ -70,12 +70,12 @@ MySQL2
 ![](images/dashboard-ss.png)
 
 ## Quesstions
-  * Github Username: Aken00
-  * [User Github](https://github.com/Aken00)
+  * Github Username: Alexanderkeny10
+  * [User Github](https://github.com/Alexanderkeny10)
   * You can reach me at (ajken04@gmail.com)
 
 ## Links 
-Visit project at:https://github.com/Aken00/Tech-Blog-MVC
+Visit project at:https://github.com/Alexanderkeny10/Tech-Blog-MVC
 
 Visit deployed project at: https://biased-tech-hub.herokuapp.com/ 
 
